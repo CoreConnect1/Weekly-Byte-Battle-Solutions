@@ -10,30 +10,40 @@ def reverse_string(s):
 print(reverse_string("hello"))  # Output: "olleh"
 
 
-##⚙️ Intermediate Level: Fibonacci Sequence
-Challenge:
-Write a program to print the first n Fibonacci numbers.
-Input: n = 6 → Output: 0 1 1 2 3 5
+⚙️ Challenge 2: Nth Fibonacci Number (Without Recursion)
+❓ Problem:
+Write a program to find the Nth Fibonacci number without using recursion.
+The Fibonacci sequence is: 0, 1, 1, 2, 3, 5, 8, 13, ...
+
+
 
 Python Solution:
 def fibonacci(n):
+    if n == 0: return 0
+    elif n == 1: return 1
+
     a, b = 0, 1
-    for _ in range(n):
-        print(a, end=" ")
+    for _ in range(2, n + 1):
         a, b = b, a + b
+    return b
 
-fibonacci(6)
+# Example usage
+print(fibonacci(7))
 
-##🚀 Advanced Level: Check for Anagrams
-Challenge:
-Write a function to check if two strings are anagrams.
-Input: "listen", "silent" → Output: True
+🚀 Challenge 3: Unique Paths in a Grid
+❓ Problem:
+Given a m x n grid, find how many unique paths exist from top-left to bottom-right if you can only move right or down.
+Input: m = 3, n = 2 → Output: 3
 
 Python Solution:
-def is_anagram(str1, str2):
-    return sorted(str1) == sorted(str2)
+import math
 
-print(is_anagram("listen", "silent"))  # Output: True
+def unique_paths(m, n):
+    return math.comb(m + n - 2, n - 1)
+
+# Example usage
+print(unique_paths(3, 2))
+
 
 
 
