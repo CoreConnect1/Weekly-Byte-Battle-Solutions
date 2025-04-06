@@ -1,2 +1,10 @@
-#Write a program to reverse any given string.
- 📌 Input: "hello"        Output: "olleh"
+🔰 Beginner Level: Reverse a String
+Challenge:
+Write a program to reverse a given string.
+Input: "hello" → Output: "olleh"
+
+Python Solution:
+def reverse_string(s):
+    return s[::-1]
+
+print(reverse_string("hello"))  # Output: "olleh"
