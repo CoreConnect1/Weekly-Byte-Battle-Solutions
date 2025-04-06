@@ -1,4 +1,4 @@
-🔰 Beginner Level: Reverse a String
+##🔰 Beginner Level: Reverse a String
 Challenge:
 Write a program to reverse a given string.
 Input: "hello" → Output: "olleh"
@@ -8,3 +8,33 @@ def reverse_string(s):
     return s[::-1]
 
 print(reverse_string("hello"))  # Output: "olleh"
+
+
+##⚙️ Intermediate Level: Fibonacci Sequence
+Challenge:
+Write a program to print the first n Fibonacci numbers.
+Input: n = 6 → Output: 0 1 1 2 3 5
+
+Python Solution:
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+fibonacci(6)
+
+##🚀 Advanced Level: Check for Anagrams
+Challenge:
+Write a function to check if two strings are anagrams.
+Input: "listen", "silent" → Output: True
+
+Python Solution:
+def is_anagram(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+print(is_anagram("listen", "silent"))  # Output: True
+
+
+
+##Keep Trying :)
