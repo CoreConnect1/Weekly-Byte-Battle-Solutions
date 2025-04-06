@@ -1,0 +1,65 @@
+🟢 Level 1: Sum of Digits
+🔹 Task:
+Print the sum of digits of a number.
+
+📥 Input:
+n (1 ≤ n ≤ 10⁹)
+
+📤 Output:
+Sum of digits
+
+✅ Example:
+Input: 1234 → Output: 10
+
+✅ Python Solution:
+n = int(input())
+digit_sum = sum(int(d) for d in str(n))
+print(digit_sum)
+
+
+
+🟡 Level 2: Vowel Counter
+🔹 Task:
+Count vowels (a, e, i, o, u) in a string.
+
+📥 Input:
+String of lowercase letters
+
+📤 Output:
+Number of vowels
+
+✅ Example:
+Input: weeklybytebattle → Output: 5
+
+✅ Python Solution:
+s = input().strip()
+vowels = 'aeiou'
+count = sum(1 for char in s if char in vowels)
+print(count)
+
+
+
+🔴 Level 3: Anagram Check
+🔹 Task:
+Check if two strings are anagrams.
+
+📥 Input:
+Two lowercase strings
+
+📤 Output:
+YES or NO
+
+✅ Example:
+Input: listen silent → Output: YES
+
+✅ Python Solution:
+from collections import Counter
+
+s1 = input().strip()
+s2 = input().strip()
+
+if Counter(s1) == Counter(s2):
+    print("YES")
+else:
+    print("NO")
+
